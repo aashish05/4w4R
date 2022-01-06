@@ -1,0 +1,114 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>4W4R</title>
+
+
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" href="4w4r_logo.png" sizes="180x180">
+    <link rel="icon" href="4w4r_logo.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="4w4r_logo.png" sizes="16x16" type="image/png">
+    <link rel="stylesheet" media="screen" href="css/style.css">
+
+
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+</head>
+<body id="particles-js">
+
+
+<main>
+
+    <div class="container">
+        <header class="d-flex flex-wrap justify-content-center py-3 mb-4">
+            <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+                <img class="bi me-2" width="40" height="32" src="4w4r_logo.png">
+                <span class="fs-4">4W4R</span>
+            </a>
+
+            <ul class="nav nav-pills">
+                <li class="nav-item"><a id="home_tag" class="nav-link active" aria-current="page">Home</a></li>
+                <li class="nav-item"><a id="about_tag" class="nav-link">About Us</a></li>
+                <li class="nav-item"><a id="contact_tag" class="nav-link">Contact Us</a></li>
+            </ul>
+        </header>
+    </div>
+
+    <div class="container">
+        <div id="home_t" class="d-none">
+            Home
+        </div>
+        <div id="about_us" class="d-none">
+            About us
+        </div>
+        <div id="contact_us" class="d-none">
+            contact us
+        </div>
+    </div>
+</main>
+
+
+<script src="https://getbootstrap.com/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+<script src="js/particles.js"></script>
+<script src="js/app.js"></script>
+<script>
+    document.getElementById('home_tag').onclick = () => {
+        document.getElementById('home_tag').className = "nav-link active";
+        document.getElementById('about_tag').className = "nav-link";
+        document.getElementById('contact_tag').className = "nav-link";
+        document.getElementById('home_t').className = "active";
+        document.getElementById('about_us').className = "d-none";
+        document.getElementById('contact_us').className = "d-none";
+    }
+    document.body.onload = () => {
+        document.getElementById('home_tag').className = "nav-link active";
+        document.getElementById('about_tag').className = "nav-link";
+        document.getElementById('contact_tag').className = "nav-link";
+        document.getElementById('home_t').className = "active";
+        document.getElementById('about_us').className = "d-none";
+        document.getElementById('contact_us').className = "d-none";
+    }
+    document.getElementById('contact_tag').onclick = () => {
+        document.getElementById('home_tag').className = "nav-link";
+        document.getElementById('about_tag').className = "nav-link";
+        document.getElementById('contact_tag').className = "nav-link active";
+        document.getElementById('home_t').className = "d-none";
+        document.getElementById('about_us').className = "d-none";
+        document.getElementById('contact_us').className = "active";
+    }
+    document.getElementById('about_tag').onclick = () => {
+        document.getElementById('home_tag').className = "nav-link";
+        document.getElementById('about_tag').className = "nav-link active";
+        document.getElementById('contact_tag').className = "nav-link";
+        document.getElementById('home_t').className = "d-none";
+        document.getElementById('about_us').className = "active";
+        document.getElementById('contact_us').className = "d-none";
+    }
+</script>
+
+</body>
+</html>
